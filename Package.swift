@@ -3,6 +3,7 @@
 
 import PackageDescription
 
+// v1.2.0
 let package = Package(
     name: "GoogleMobileAdsMediationFyber",
     products: [
@@ -12,8 +13,11 @@ let package = Package(
             targets: ["GoogleMobileAdsMediationFyber"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .binaryTarget(
+            name: "InMobiSDK",
+            url: "https://github.com/AnyMindG/AllFrameworks/releases/download/10000.6.0/GoogleMobileAdsMediationFyber.zip",
+            checksum: "c1582495b37211471d9f7f5142d07d6a732eab7be61e826c39c532fd4b13ff1a"
+        ),
         .target(
             name: "GoogleMobileAdsMediationFyber"),
         .testTarget(
